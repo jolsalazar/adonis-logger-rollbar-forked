@@ -1,8 +1,8 @@
-# Adonis Stripe <img src="https://stripe.com/favicon.ico" alt="Stripe icon" width="25px" height="25px">
+# Adonis Logentries <img src="https://d2rqpywgspga97.cloudfront.net/static/c2f12c2/js/transpiled/images/le_icon.svg" alt="Logentries icon" width="25px" height="25px">
 
-This service provider makes it easier to integrate and to work with Stripe official library.
+This service provider adds Logentries as a driver to Adonis Logger.
 
-It is built on top of [stripe-node](https://github.com/stripe/stripe-node) and proxies all the methods keeping them 100% original. So you can follow official Stripe documentation.
+It is built on top of [le_node](https://github.com/rapid7/le_node).
 
 <img src="http://res.cloudinary.com/adonisjs/image/upload/q_100/v1497112678/adonis-purple_pzkmzt.svg" width="200px" align="right" hspace="30px" vspace="140px">
 
@@ -63,16 +63,6 @@ test.failing('2 + 2 is always 4, but add method returns 6', (assert) => {
 
 Now since the `add` method has a bug, it will return `6` instead of `4`. But the build will pass.
 
-[appveyor-image]: https://img.shields.io/appveyor/ci/thetutlage/adonis-drive/master.svg?style=flat-square
-
-[appveyor-url]: https://ci.appveyor.com/project/thetutlage/adonis-drive
-
 [npm-image]: https://img.shields.io/npm/v/@adonisjs/drive.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/@adonisjs/drive
 
-[travis-image]: https://img.shields.io/travis/adonisjs/adonis-drive/master.svg?style=flat-square
-[travis-url]: https://travis-ci.org/adonisjs/adonis-drive
-
-[coveralls-image]: https://img.shields.io/coveralls/adonisjs/adonis-drive/develop.svg?style=flat-square
-
-[coveralls-url]: https://coveralls.io/github/adonisjs/adonis-drive

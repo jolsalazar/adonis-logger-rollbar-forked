@@ -4,19 +4,28 @@ Make sure to register the provider inside `start/app.js` file.
 
 ```js
 const providers = [
-  'adonis-logger-logdna/providers/LogdnaProvider'
+  'adonis-logger-logentries/providers/LogentriesProvider'
 ]
 ```
 
-That's all! Now you can use the provider by pulling it from IoC container
+Add new configuration inside `logger` module in `config/app.js`:
+```js
+logentries: {
+  driver: 'logentries',
+  token: Env.get('LOGENTRIES_TOKEN', ''),
+  level: 'info'
+}
+```
+
+That's it! Now you can use Logger that will send data to Logentries.
 
 ```js
 const Logger = use('Logger')
 
-Logger.inf0('Test message')
+Logger.info('Test message')
 
 ```
 
 ## Env variables
 
-The `LogDNA` driver relies on sinle Env variable: `LOGDNA_API_KEY=`.
+`Logentries` driver relies on single Env variable: `LOGENTRIES_TOKEN=`.

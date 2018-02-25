@@ -1,49 +1,18 @@
 'use strict'
 
-/*
- * adonis-framework
- *
- * (c) Harminder Virk <virk@adonisjs.com>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
-*/
-
 const _ = require('lodash')
 const path = require('path')
 const Winston = require('winston')
 const Logentries = require('le_node')
 
 /**
- * @module Adonis
- * @submodule framework
- */
-
-/**
  * Winston console transport driver for @ref('Logger')
- * All the logs will be written to the filename
- * defined inside config.
+ * All the logs will be sent to Logentries.
  *
- * @class WinstonFile
+ * @class WinstonLogentries
  * @constructor
  */
 class WinstonLogentries {
-  /**
-   * Returns an array of dependencies to be injected
-   * by IoC container.
-   *
-   * @attribute inject
-   * @static
-   *
-   * @return {Array}
-   */
-  static get inject() {
-    return ['Adonis/Src/Helpers']
-  }
-
-  constructor(Helpers) {
-    this.Helpers = Helpers
-  }
 
   /**
    * Set config. This method is called by Logger
@@ -71,6 +40,7 @@ class WinstonLogentries {
      * Updating winston levels with syslog standard levels.
      */
     this.logger.setLevels(this.levels)
+
   }
 
   /**
