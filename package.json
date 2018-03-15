@@ -1,6 +1,6 @@
 {
   "name": "adonis-logger-logentries",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Logentries driver for Adonis Logger",
   "main": "index.js",
   "scripts": {

@@ -1,7 +1,7 @@
 'use strict'
 
 const { ServiceProvider } = require('@adonisjs/fold')
-const Logentries = require('../Drivers/Logentries')
+const Logentries = require('../drivers/Logentries')
 
 class LogentriesProvider extends ServiceProvider {
   register () {
