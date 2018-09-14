@@ -1,5 +1,7 @@
 # Adonis Logentries <img src="https://d2rqpywgspga97.cloudfront.net/static/c2f12c2/js/transpiled/images/le_icon.svg" alt="Logentries icon" width="25px" height="25px">
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/keeross/adonis-logger-logentries.svg)](https://greenkeeper.io/)
+
 This service provider adds Logentries as a driver to Adonis Logger.
 
 It is built on top of [le_node](https://github.com/rapid7/le_node).
