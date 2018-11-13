@@ -32,7 +32,7 @@ class WinstonLogentries {
     /**
      * Creating new instance of winston with file transport
      */
-    this.logger = new Winston.Logger({
+    this.logger = Winston.createLogger({
       transports: [new Winston.transports.Logentries(this.config)]
     })
 
