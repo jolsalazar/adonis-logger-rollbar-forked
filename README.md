@@ -1,4 +1,4 @@
-# Adonis Logentries <img src="https://d2rqpywgspga97.cloudfront.net/static/c2f12c2/js/transpiled/images/le_icon.svg" alt="Logentries icon" width="25px" height="25px">
+# Adonis Logentries <img src="https://reps.ams3.cdn.digitaloceanspaces.com/logentries_logo.png" alt="Logentries icon" width="25px" height="25px">
 
 This service provider adds Logentries as a driver to Adonis Logger.
 
