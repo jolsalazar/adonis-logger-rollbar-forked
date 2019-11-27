@@ -1,7 +1,7 @@
 'use strict'
 
 const Winston = require('winston')
-const Rollbar = require('rollbar')
+const RollbarTransport = require('winston-transport-rollbar-3')
 
 /**
  * Winston console transport driver for @ref('Logger')
@@ -31,7 +31,7 @@ class WinstonRollbar {
      * Creating new instance of winston with file transport
      */
     this.logger = Winston.createLogger({
-      transports: [new Winston.transports.Rollbar(this.config)]
+      transports: [new RollbarTransport(this.config)]
     })
 
     /**
