@@ -31,7 +31,7 @@ class WinstonRollbar {
      * Creating new instance of winston with file transport
      */
     this.logger = Winston.createLogger({
-      transports: [new RollbarTransport(this.config)]
+      transports: [new RollbarTransport(config, 'info')]
     })
 
     /**
