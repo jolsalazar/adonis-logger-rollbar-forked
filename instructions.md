@@ -4,20 +4,20 @@ Make sure to register the provider inside `start/app.js` file.
 
 ```js
 const providers = [
-  'adonis-logger-logentries/providers/LogentriesProvider'
+  'adonis-logger-rollbar/providers/RollbarProvider'
 ]
 ```
 
 Add new configuration inside `logger` module in `config/app.js`:
 ```js
-logentries: {
-  driver: 'logentries',
-  token: Env.get('LOGENTRIES_TOKEN', ''),
+rollbar: {
+  driver: 'rollbar',
+  token: Env.get('ROLLBAR_TOKEN', ''),
   level: 'info'
 }
 ```
 
-That's it! Now you can use Logger that will send data to Logentries.
+That's it! Now you can use Logger that will send data to Rollbar.
 
 ```js
 const Logger = use('Logger')
@@ -28,4 +28,4 @@ Logger.info('Test message')
 
 ## Env variables
 
-`Logentries` driver relies on single Env variable: `LOGENTRIES_TOKEN=`.
+`Rollbar` driver relies on single Env variable: `ROLLBAR_TOKEN=`.

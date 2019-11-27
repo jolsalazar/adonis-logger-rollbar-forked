@@ -1,18 +1,16 @@
 'use strict'
 
-const _ = require('lodash')
-const path = require('path')
 const Winston = require('winston')
-const Logentries = require('le_node')
+const Rollbar = require('rollbar')
 
 /**
  * Winston console transport driver for @ref('Logger')
- * All the logs will be sent to Logentries.
+ * All the logs will be sent to Rollbar.
  *
- * @class WinstonLogentries
+ * @class WinstonRollbar
  * @constructor
  */
-class WinstonLogentries {
+class WinstonRollbar {
 
   /**
    * Set config. This method is called by Logger
@@ -33,7 +31,7 @@ class WinstonLogentries {
      * Creating new instance of winston with file transport
      */
     this.logger = Winston.createLogger({
-      transports: [new Winston.transports.Logentries(this.config)]
+      transports: [new Winston.transports.Rollbar(this.config)]
     })
 
     /**
@@ -104,4 +102,4 @@ class WinstonLogentries {
   }
 }
 
-module.exports = WinstonLogentries
+module.exports = WinstonRollbar
