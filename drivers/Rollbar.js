@@ -1,9 +1,8 @@
 'use strict'
 
 const _ = require('lodash')
-const path = require('path')
 const Winston = require('winston')
-const Rollbar = require('rollbar')
+const RollbarTransport = require('winston-transport-rollbar-3')
 
 /**
  * Winston console transport driver for @ref('Logger')
@@ -24,16 +23,17 @@ class WinstonRollbar {
    * @param  {Object}  config
    */
   setConfig(config) {
-    this.config = Object.assign({}, {
+    this.config = {
       name: 'adonis-app',
-      level: 'info'
-    }, config)
+      level: 'info',
+      rollbarConfig: config,
+    }
 
     /**
      * Creating new instance of winston with file transport
      */
     this.logger = Winston.createLogger({
-      transports: [new Winston.transports.Rollbar(this.config)]
+      transports: [new RollbarTransport(this.config)]
     })
 
     /**
